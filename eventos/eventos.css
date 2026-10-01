@@ -1,0 +1,249 @@
+/* =========================================================
+   R38tao · Próximos encontros
+   Usa ../style.css (tokens, fundo, lista/item, rodapé, modais,
+   animação). Aqui: topo, galeria infinita de países e Brasil.
+   ========================================================= */
+
+.ev {
+  max-width: 1240px; margin: 0 auto;
+  padding: 24px 16px calc(28px + env(safe-area-inset-bottom));
+}
+
+/* ---------- topo ---------- */
+.voltar {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 40px; padding: 0 16px 0 12px; border-radius: 999px;
+  border: 1.1px solid var(--line); background: var(--card); color: var(--ink);
+  font-size: 15px; font-weight: 500;
+  transition: border-color .2s, color .2s;
+}
+.voltar svg { width: 18px; height: 18px; transition: transform .35s var(--ease); }
+.voltar:hover { border-color: var(--laranja); color: var(--laranja); }
+.voltar:hover svg { transform: translateX(-3px); }
+
+.ev__titulo { margin-top: 28px; font-size: 38px; font-weight: 600; letter-spacing: -.045em; line-height: 1.05; }
+.ev__lead { margin-top: 10px; max-width: 46ch; color: var(--muted); font-size: 17px; }
+
+/* ---------- galeria infinita ----------
+   O trilho rola na horizontal (arrastar, deslizar ou pelos botões).
+   O eventos.js duplica os ingressos e empurra o scroll devagar; ao
+   passar de uma volta inteira, recua uma volta sem a pessoa perceber. */
+.galeria { margin: 28px -16px 40px; }
+.galeria__topo { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 16px 14px; }
+.galeria__titulo { font-size: 20px; font-weight: 600; letter-spacing: -.025em; }
+.galeria__nav { display: flex; gap: 8px; }
+.galeria__btn {
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1.1px solid var(--line); background: var(--card); color: var(--ink);
+  transition: border-color .2s, color .2s, background .2s, transform .1s;
+}
+.galeria__btn svg { width: 20px; height: 20px; }
+.galeria__btn:hover { border-color: var(--laranja); color: var(--laranja); }
+.galeria__btn:active { transform: scale(.92); background: var(--card-hover); }
+
+.galeria__trilho {
+  display: flex; gap: 14px; align-items: stretch;
+  overflow-x: auto; overscroll-behavior-x: contain;
+  padding: 4px 16px 10px;
+  scrollbar-width: none;
+  cursor: grab;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+.galeria__trilho::-webkit-scrollbar { display: none; }
+.galeria__trilho.arrastando { cursor: grabbing; user-select: none; }
+.galeria__trilho.arrastando a { pointer-events: none; }
+
+/* ---------- ingresso ----------
+   Cabeça (bandeira, país) | picote com dois recortes | corpo (cidades)
+   | canhoto (código e barras). Os recortes laterais são um mask com
+   dois círculos transparentes na altura do picote (--corte). */
+.pais {
+  --corte: 168px;
+  --furo: 14px;
+  position: relative; isolation: isolate; overflow: hidden;
+  flex: 0 0 min(82vw, 320px);
+  display: flex; flex-direction: column;
+  border-radius: 22px;
+  background: #26262D;
+  -webkit-mask:
+    radial-gradient(circle var(--furo) at 0 var(--corte), #0000 98%, #000) left / 51% 100% no-repeat,
+    radial-gradient(circle var(--furo) at 100% var(--corte), #0000 98%, #000) right / 51% 100% no-repeat;
+  mask:
+    radial-gradient(circle var(--furo) at 0 var(--corte), #0000 98%, #000) left / 51% 100% no-repeat,
+    radial-gradient(circle var(--furo) at 100% var(--corte), #0000 98%, #000) right / 51% 100% no-repeat;
+  transition: transform .45s var(--ease), background .3s;
+}
+.pais:hover { transform: translateY(-4px); background: #2A2A32; }
+
+.pais__bandeira {
+  position: absolute; inset: 0 0 auto; z-index: -1; height: var(--corte);
+  background-size: cover; background-position: center;
+  opacity: .3;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .55) 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .55) 55%, transparent 100%);
+  transition: opacity .45s var(--ease), transform 1.2s var(--ease);
+}
+.pais:hover .pais__bandeira { opacity: .42; transform: scale(1.05); }
+
+.pais__cabeca {
+  height: var(--corte);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 18px 22px 20px;
+}
+.pais__rotulo {
+  display: flex; justify-content: space-between; margin-bottom: auto;
+  font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2);
+}
+.pais__nome { font-size: 30px; font-weight: 600; letter-spacing: -.04em; line-height: 1.05; }
+.pais__conta { margin-top: 3px; color: var(--muted); font-size: 15px; }
+
+/* picote: tracejado entre os dois recortes */
+.pais__picote {
+  display: block; height: 0; margin: 0 calc(var(--furo) + 8px);
+  border-top: 2px dashed rgba(255, 255, 255, .16);
+}
+
+.pais__corpo { flex: 1; display: flex; flex-direction: column; padding: 16px 12px 6px; }
+.pais__corpo .lista { background: rgba(23, 23, 27, .55); }
+
+.pais__canhoto {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 22px 18px;
+}
+.pais__codigo { font-size: 12px; font-weight: 600; letter-spacing: .14em; color: var(--faint); }
+.pais__barras {
+  width: 96px; height: 26px; opacity: .5;
+  background: repeating-linear-gradient(90deg,
+    var(--ink-2) 0 2px, transparent 2px 4px, var(--ink-2) 4px 5px, transparent 5px 8px,
+    var(--ink-2) 8px 11px, transparent 11px 12px, var(--ink-2) 12px 13px, transparent 13px 16px);
+}
+
+.pais__botao {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-top: auto; padding: 16px 18px 16px 20px; border-radius: 16px;
+  background: var(--laranja); color: #17171B; font-size: 17px; font-weight: 600;
+  transition: transform .35s var(--ease);
+}
+.pais__botao svg { transition: transform .35s var(--ease); }
+.pais__botao:hover svg { transform: translateX(4px); }
+.pais__botao:active { transform: scale(.98); }
+
+/* ---------- Brasil ---------- */
+.brasil { scroll-margin-top: 20px; }
+.brasil__topo { display: flex; flex-direction: column; gap: 14px; }
+.brasil__titulo { font-size: 30px; font-weight: 600; letter-spacing: -.04em; line-height: 1.1; }
+
+.busca {
+  display: flex; align-items: center; gap: 10px;
+  height: 50px; padding: 0 18px; border-radius: 999px;
+  border: 1.1px solid var(--line); background: var(--card); color: var(--faint);
+  transition: border-color .2s;
+}
+.busca:focus-within { border-color: var(--laranja); }
+.busca input { flex: 1; min-width: 0; height: 100%; background: none; border: 0; outline: 0; color: var(--ink); font: inherit; font-size: 16px; }
+.busca input::placeholder { color: var(--faint); }
+
+.filtros {
+  display: flex; gap: 8px; margin: 14px -16px 16px; padding: 0 16px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.filtros::-webkit-scrollbar { display: none; }
+.filtros button {
+  flex: none; padding: 9px 16px; border-radius: 999px;
+  border: 1.1px solid var(--line); background: var(--card); color: var(--ink-2);
+  font-size: 15px; font-weight: 500;
+  transition: background .3s var(--ease), color .3s, border-color .3s, transform .1s;
+}
+.filtros button:hover { border-color: var(--line-hover); }
+.filtros button:active { transform: scale(.95); }
+.filtros button[aria-pressed="true"] { background: var(--laranja); border-color: var(--laranja); color: #17171B; }
+
+.item[hidden] { display: none; }
+.item.surge { animation: entra .45s var(--ease) backwards; animation-delay: calc(min(var(--i, 0), 10) * 35ms); }
+
+.vazio { margin-top: 12px; padding: 24px; border-radius: var(--r); border: 1.1px dashed var(--line); color: var(--muted); text-align: center; }
+.vazio a { color: var(--laranja); }
+
+/* ---------- botão e pop-up do calendário ---------- */
+.ev__acoes { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.cal-botao {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 40px; padding: 0 16px 0 13px; border-radius: 999px;
+  background: var(--laranja); color: #17171B; font-size: 15px; font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 10px 24px -14px rgba(247, 147, 26, .8);
+  transition: transform .35s var(--ease), box-shadow .35s;
+}
+.cal-botao svg { width: 19px; height: 19px; }
+.cal-botao:hover { transform: translateY(-2px); }
+.cal-botao:active { transform: scale(.96); transition-duration: .1s; }
+
+.cal__mes { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.cal__nome { font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
+.cal__nav {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1.1px solid var(--line); color: var(--ink);
+  transition: border-color .2s, color .2s, transform .1s;
+}
+.cal__nav svg { width: 18px; height: 18px; }
+.cal__nav:hover { border-color: var(--laranja); color: var(--laranja); }
+.cal__nav:active { transform: scale(.92); }
+
+.cal__semana, .cal__dias { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.cal__semana span { padding-bottom: 6px; color: var(--faint); font-size: 13px; font-weight: 600; }
+.cal__dia {
+  position: relative; display: grid; place-items: center;
+  aspect-ratio: 1; border-radius: 12px;
+  color: var(--ink-2); font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums;
+}
+.cal__dia.hoje { box-shadow: inset 0 0 0 1.1px var(--line-hover); color: var(--ink); }
+.cal__dia.tem { background: var(--laranja); color: #17171B; font-weight: 700; }
+.cal__dias.troca .cal__dia { animation: entra .4s var(--ease) backwards; animation-delay: calc(var(--i, 0) * 10ms); }
+
+.cal h3 { margin: 22px 0 10px; font-size: 15px; font-weight: 600; color: var(--ink); }
+.cal__vazio, .cal__dica { color: var(--muted); font-size: 15px; }
+.cal__dica { margin: -4px 0 12px; }
+.cal__lista .item { border: 1.1px solid var(--line); margin-bottom: 6px; }
+.cal__lista .item::before { display: none; }
+
+.cal__pendentes { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+.cal__chip {
+  display: flex; flex-direction: column; padding: 10px 12px; border-radius: 14px;
+  border: 1.1px solid var(--line); background: rgba(255, 255, 255, .02);
+  transition: border-color .2s, background .2s;
+}
+.cal__chip b { font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.3; }
+.cal__chip span { font-size: 12.5px; color: var(--faint); }
+.cal__chip:hover { border-color: var(--laranja); background: rgba(247, 147, 26, .06); }
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+@media (min-width: 900px) {
+  .ev { padding: clamp(28px, 5vh, 56px) clamp(28px, 4vw, 56px) 0; }
+
+  .ev__topo { display: grid; grid-template-columns: 1fr auto; align-items: end; column-gap: 40px; }
+  .ev__acoes { grid-column: 1 / -1; justify-content: space-between; }
+  .ev__titulo { font-size: clamp(48px, 6vw, 80px); letter-spacing: -.05em; line-height: 1; }
+  .ev__lead { max-width: 36ch; margin: 0 0 8px; font-size: 18px; }
+
+  .galeria { margin: 44px calc(50% - 50vw) 64px; }
+  .galeria__topo { padding-inline: max(clamp(28px, 4vw, 56px), calc(50vw - 620px + clamp(28px, 4vw, 56px))); padding-bottom: 18px; }
+  .galeria__titulo { font-size: 24px; }
+  .galeria__trilho { gap: 18px; padding-inline: max(clamp(28px, 4vw, 56px), calc(50vw - 620px + clamp(28px, 4vw, 56px))); }
+  .pais { --corte: 190px; --furo: 16px; flex-basis: 350px; }
+  .pais__nome { font-size: 34px; }
+
+  .brasil__topo { flex-direction: row; justify-content: space-between; align-items: end; }
+  .brasil__titulo { font-size: 40px; }
+  .busca { width: 340px; }
+  .filtros { margin: 18px 0 20px; padding: 0; }
+
+  /* uma lista só, em três colunas */
+  .lista--grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 8px; padding: 8px; }
+  .lista--grade .item::before { display: none; }
+
+  .ev .rodape { margin-top: 56px; }
+}

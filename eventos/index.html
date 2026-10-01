@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!-- Rastreio: o mesmo da página de links (ver ../LEIA-ME.md). Pixel vazio = nada sai. -->
+  <script>window.LN_TRACK = { pixel: '', capi: '../capi.php' };</script>
+  <script>if (LN_TRACK.pixel) { var t = document.createElement('script'); t.src = '../tracking.js'; document.head.appendChild(t); }</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Próximos encontros | Renato Trezoitão</title>
+  <meta name="description" content="Encontros presenciais do Renato Trezoitão (@r38tao) no Brasil e no exterior. Escolha sua cidade e entre no grupo oficial no Telegram.">
+  <meta name="theme-color" content="#17171B">
+  <meta property="og:title" content="Próximos encontros · @r38tao">
+  <meta property="og:description" content="Escolha sua cidade e entre na lista do próximo encontro.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/renato.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="eventos.css">
+  <script>
+  (function(){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.className+=" anim";}catch(e){}})();
+  </script>
+</head>
+<body>
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+    <div class="bg__grade"></div>
+  </div>
+
+  <main class="ev">
+
+    <header class="ev__topo cena">
+      <div class="ev__acoes a">
+        <a class="voltar" href="../"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg> Links</a>
+        <button type="button" class="cal-botao" data-modal="modalCalendario"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"/></svg> Calendário</button>
+      </div>
+      <h1 class="ev__titulo a">Próximos encontros</h1>
+      <p class="ev__lead a">Escolha seu país e entre no grupo da sua cidade no Telegram. É lá que a data sai primeiro.</p>
+    </header>
+
+    <!-- galeria infinita: começa pelo Paraguai; anda sozinha, pausa no toque e no mouse -->
+    <section class="galeria cena" aria-label="Países">
+      <div class="galeria__topo">
+        <h2 class="galeria__titulo">Escolha o país</h2>
+        <div class="galeria__nav">
+          <button type="button" class="galeria__btn" data-dir="-1" aria-label="País anterior"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+          <button type="button" class="galeria__btn" data-dir="1" aria-label="Próximo país"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+        </div>
+      </div>
+      <div class="galeria__trilho">
+        <article class="pais a">
+          <span class="pais__bandeira" style="background-image:url('bandeiras/py.svg')" aria-hidden="true"></span>
+          <div class="pais__cabeca">
+            <p class="pais__rotulo"><span>Ingresso</span><span>2026</span></p>
+            <h2 class="pais__nome">Paraguai</h2>
+            <p class="pais__conta">2 cidades</p>
+          </div>
+          <span class="pais__picote" aria-hidden="true"></span>
+          <div class="pais__corpo">
+            <div class="lista">
+              <a class="item" data-cta="evento" data-nome="Ciudad del Este" href="https://t.me/+Xzl0vMCR-VU4MGUx" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Ciudad del Este</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+              <a class="item" data-cta="evento" data-nome="Asunción" href="https://t.me/+BmocRL5HVYBkYzgx" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Asunción</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <div class="pais__canhoto" aria-hidden="true">
+            <span class="pais__codigo">PY · 2026</span>
+            <span class="pais__barras"></span>
+          </div>
+        </article>
+        <article class="pais a">
+          <span class="pais__bandeira" style="background-image:url('bandeiras/pt.svg')" aria-hidden="true"></span>
+          <div class="pais__cabeca">
+            <p class="pais__rotulo"><span>Ingresso</span><span>2026</span></p>
+            <h2 class="pais__nome">Portugal</h2>
+            <p class="pais__conta">2 cidades</p>
+          </div>
+          <span class="pais__picote" aria-hidden="true"></span>
+          <div class="pais__corpo">
+            <div class="lista">
+              <a class="item" data-cta="evento" data-nome="Lisboa" href="https://t.me/+3Z10qRa7n0hlNGQx" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Lisboa</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+              <a class="item" data-cta="evento" data-nome="Porto" href="https://t.me/+lTXZAXz5MrQzMTQx" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Porto</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <div class="pais__canhoto" aria-hidden="true">
+            <span class="pais__codigo">PT · 2026</span>
+            <span class="pais__barras"></span>
+          </div>
+        </article>
+        <article class="pais a">
+          <span class="pais__bandeira" style="background-image:url('bandeiras/us.svg')" aria-hidden="true"></span>
+          <div class="pais__cabeca">
+            <p class="pais__rotulo"><span>Ingresso</span><span>2026</span></p>
+            <h2 class="pais__nome">Estados Unidos</h2>
+            <p class="pais__conta">2 cidades</p>
+          </div>
+          <span class="pais__picote" aria-hidden="true"></span>
+          <div class="pais__corpo">
+            <div class="lista">
+              <a class="item" data-cta="evento" data-nome="Boston" href="https://t.me/+Ma_YzX2GKWU1ZGRh" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Boston</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+              <a class="item" data-cta="evento" data-nome="Orlando" href="https://t.me/+r12FELmsjIxhODI5" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Orlando</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <div class="pais__canhoto" aria-hidden="true">
+            <span class="pais__codigo">US · 2026</span>
+            <span class="pais__barras"></span>
+          </div>
+        </article>
+        <article class="pais a">
+          <span class="pais__bandeira" style="background-image:url('bandeiras/uy.svg')" aria-hidden="true"></span>
+          <div class="pais__cabeca">
+            <p class="pais__rotulo"><span>Ingresso</span><span>2026</span></p>
+            <h2 class="pais__nome">Uruguai</h2>
+            <p class="pais__conta">1 cidade</p>
+          </div>
+          <span class="pais__picote" aria-hidden="true"></span>
+          <div class="pais__corpo">
+            <div class="lista">
+              <a class="item" data-cta="evento" data-nome="Montevidéu" href="https://t.me/+5AjlqbcmNadlNGFh" target="_blank" rel="noopener">
+                <span class="item__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L78.15,126.35l-49.6-9.73ZM88,200V152.52l24.79,21.74Zm87.53,8L92.85,135.5l119-85.29Z"/></svg></span>
+                <span class="item__nome">Montevidéu</span>
+                <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <div class="pais__canhoto" aria-hidden="true">
+            <span class="pais__codigo">UY · 2026</span>
+            <span class="pais__barras"></span>
+          </div>
+        </article>
+        <article class="pais a">
+          <span class="pais__bandeira" style="background-image:url('bandeiras/br.svg')" aria-hidden="true"></span>
+          <div class="pais__cabeca">
+            <p class="pais__rotulo"><span>Ingresso</span><span>2026</span></p>
+            <h2 class="pais__nome">Brasil</h2>
+            <p class="pais__conta">28 cidades em 5 regiões</p>
+          </div>
+          <span class="pais__picote" aria-hidden="true"></span>
+          <div class="pais__corpo">
+            <a class="pais__botao" href="#brasil">Ver cidades <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+          </div>
+          <div class="pais__canhoto" aria-hidden="true">
+            <span class="pais__codigo">BR · 2026</span>
+            <span class="pais__barras"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="brasil cena" id="brasil" aria-labelledby="t-brasil">
+      <div class="brasil__topo a">
+        <h2 class="brasil__titulo" id="t-brasil">Brasil</h2>
+        <label class="busca">
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
+          <input type="search" placeholder="Buscar cidade ou estado" aria-label="Buscar cidade ou estado" autocomplete="off">
+        </label>
+      </div>
+      <div class="filtros a" role="group" aria-label="Filtrar por região"><button type="button" aria-pressed="true" data-regiao="todas">Todas</button><button type="button" aria-pressed="false" data-regiao="norte">Norte</button><button type="button" aria-pressed="false" data-regiao="nordeste">Nordeste</button><button type="button" aria-pressed="false" data-regiao="centro-oeste">Centro-Oeste</button><button type="button" aria-pressed="false" data-regiao="sudeste">Sudeste</button><button type="button" aria-pressed="false" data-regiao="sul">Sul</button></div>
+      <div class="lista lista--grade">
+        <a class="item a" data-cta="grupo" data-nome="Acre" data-regiao="norte" data-busca="acre ac" href="https://t.me/+ARmz73wLIiRlYWM5" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">AC</span>
+          <span class="item__nome">Acre</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Amapá" data-regiao="norte" data-busca="amapa ap" href="https://t.me/+Haa_ST3YnOA2NDVh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">AP</span>
+          <span class="item__nome">Amapá</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Amazonas" data-regiao="norte" data-busca="amazonas am" href="https://t.me/+MMWeGiqhnL4wMTUx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">AM</span>
+          <span class="item__nome">Amazonas</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Belém" data-regiao="norte" data-busca="belem pa" href="https://t.me/+6_EvlrTTF8QyZjVh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">PA</span>
+          <span class="item__nome">Belém</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Rondônia" data-regiao="norte" data-busca="rondonia ro" href="https://t.me/+I7a9RhhKM3o4ZTgx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">RO</span>
+          <span class="item__nome">Rondônia</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Roraima" data-regiao="norte" data-busca="roraima rr" href="https://t.me/+1Ydn7snP2yYwNTQx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">RR</span>
+          <span class="item__nome">Roraima</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Tocantins" data-regiao="norte" data-busca="tocantins to" href="https://t.me/+oajX8_82jBllZTQ5" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">TO</span>
+          <span class="item__nome">Tocantins</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Aracaju" data-regiao="nordeste" data-busca="aracaju se" href="https://t.me/+2MuEwkYIlmhhZjBh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">SE</span>
+          <span class="item__nome">Aracaju</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Alagoas" data-regiao="nordeste" data-busca="alagoas al" href="https://t.me/+qretLiCB-B00MTAx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">AL</span>
+          <span class="item__nome">Alagoas</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Fortaleza" data-regiao="nordeste" data-busca="fortaleza ce" href="https://t.me/+EJmlJFf_OEgzNjVh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">CE</span>
+          <span class="item__nome">Fortaleza</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Natal" data-regiao="nordeste" data-busca="natal rn" href="https://t.me/+zTVeR9nSYWQzNWNh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">RN</span>
+          <span class="item__nome">Natal</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Paraíba" data-regiao="nordeste" data-busca="paraiba pb" href="https://t.me/+ktl1rN3WrDQ2ZmMx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">PB</span>
+          <span class="item__nome">Paraíba</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Recife" data-regiao="nordeste" data-busca="recife pe" href="https://t.me/+pz_TvaJ5j41iMWYx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">PE</span>
+          <span class="item__nome">Recife</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Salvador" data-regiao="nordeste" data-busca="salvador ba" href="https://t.me/+RMMOBgv20RM2NjVh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">BA</span>
+          <span class="item__nome">Salvador</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Brasília" data-regiao="centro-oeste" data-busca="brasilia df" href="https://t.me/+Q2DQpz4xb7dhZWIx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">DF</span>
+          <span class="item__nome">Brasília</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Goiânia" data-regiao="centro-oeste" data-busca="goiania go" href="https://t.me/+ZmO7Wus_hUJiODhh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">GO</span>
+          <span class="item__nome">Goiânia</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Mato Grosso" data-regiao="centro-oeste" data-busca="mato grosso mt" href="https://t.me/+JiKhbMZrNsg0ODcx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">MT</span>
+          <span class="item__nome">Mato Grosso</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Mato Grosso do Sul" data-regiao="centro-oeste" data-busca="mato grosso do sul ms" href="https://t.me/+0G6fb-BH9Ls2MDQ5" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">MS</span>
+          <span class="item__nome">Mato Grosso do Sul</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Belo Horizonte" data-regiao="sudeste" data-busca="belo horizonte mg" href="https://t.me/+yeRBnT_ZEUY5MTFh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">MG</span>
+          <span class="item__nome">Belo Horizonte</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Região dos Lagos" data-regiao="sudeste" data-busca="regiao dos lagos rj" href="https://t.me/+gxV4A5d_Zi5mZWM5" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">RJ</span>
+          <span class="item__nome">Região dos Lagos</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Rio de Janeiro" data-regiao="sudeste" data-busca="rio de janeiro rj" href="https://t.me/+P1f9UyU5gTA1OWIx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">RJ</span>
+          <span class="item__nome">Rio de Janeiro</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="São Paulo" data-regiao="sudeste" data-busca="sao paulo sp" href="https://t.me/+z74sDki0oskzZTcx" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">SP</span>
+          <span class="item__nome">São Paulo</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Vitória e Vila Velha" data-regiao="sudeste" data-busca="vitoria e vila velha es" href="https://t.me/+jUjPDvtChIE1NGFh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">ES</span>
+          <span class="item__nome">Vitória e Vila Velha</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Vitória e Vila Velha (2)" data-regiao="sudeste" data-busca="vitoria e vila velha (2) es" href="https://t.me/+fV8NxDOJjLhjNWZh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">ES</span>
+          <span class="item__nome">Vitória e Vila Velha (2)</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Curitiba" data-regiao="sul" data-busca="curitiba pr" href="https://t.me/+3h1hiTU8BBwxN2Ux" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">PR</span>
+          <span class="item__nome">Curitiba</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Londrina" data-regiao="sul" data-busca="londrina pr" href="https://t.me/+23kGkMord_kxNGVh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">PR</span>
+          <span class="item__nome">Londrina</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Porto Alegre" data-regiao="sul" data-busca="porto alegre rs" href="https://t.me/+a9Jp5Tg2nGkyZjU5" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">RS</span>
+          <span class="item__nome">Porto Alegre</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+        <a class="item a" data-cta="grupo" data-nome="Santa Catarina" data-regiao="sul" data-busca="santa catarina sc" href="https://t.me/+heL1nHnruz84ZmRh" target="_blank" rel="noopener">
+          <span class="item__ico item__ico--letra">SC</span>
+          <span class="item__nome">Santa Catarina</span>
+          <span class="item__seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+        </a>
+      </div>
+      <p class="vazio" hidden>Nenhuma cidade encontrada. Acompanhe pelo <a href="https://t.me/r38taochannel" target="_blank" rel="noopener">grupo oficial no Telegram</a>.</p>
+    </section>
+
+    <footer class="rodape cena">
+      <p class="rodape__legal a">
+        <button type="button" class="legal" data-modal="modalPrivacidade">Privacidade</button>
+        <button type="button" class="legal" data-modal="modalTermos">Termos de uso</button>
+      </p>
+      <p class="rodape__aviso a">Nada aqui é recomendação de investimento.</p>
+      <p class="rodape__base a">
+        <span>© <span id="ano">2026</span> Renato Trezoitão</span>
+        <span>Desenvolvido por <a href="https://grbrands.com.br" target="_blank" rel="noopener">GR Brands<span class="ponto-gr">.</span></a></span>
+      </p>
+    </footer>
+  </main>
+
+  <!-- ============================================================
+       MODAIS: abrem sobre a própria página, sem recarregar nem navegar
+       ============================================================ -->
+
+  <!-- ---------- Política de Privacidade ---------- -->
+  <div class="modal" id="modalPrivacidade" role="dialog" aria-modal="true" aria-labelledby="tituloPrivacidade" hidden>
+    <div class="modal__fundo" data-fechar></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <div>
+          <h2 id="tituloPrivacidade">Política de Privacidade</h2>
+          <p class="atualizado">Última atualização: <span class="marcador">[INSERIR DATA]</span></p>
+        </div>
+        <button type="button" class="modal__fechar" data-fechar aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal__corpo" tabindex="0">
+        <p>Esta Política descreve como <strong>Renato Trezoitão</strong> (<span class="marcador">[RAZÃO SOCIAL]</span>, CNPJ <span class="marcador">[CNPJ]</span>, com sede em <span class="marcador">[ENDEREÇO COMPLETO]</span>) trata dados pessoais nesta página, em conformidade com a Lei nº 13.709/2018, a Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+        <p>Esta é uma <strong>página de links</strong>: sua única função é reunir em uma tela os canais oficiais de @r38tao. Ela não possui formulário, cadastro, área de login nem processamento de pagamentos.</p>
+
+        <h3>1. Quais dados são coletados por esta página</h3>
+        <p><strong>Nenhum dado pessoal é solicitado ou digitado aqui.</strong> Não há campos para preencher e a página não mantém banco de dados próprio.</p>
+        <p>A página registra, para medição de anúncios, a visita e o botão clicado, associados a identificadores de navegador descritos no <strong>item 5</strong>. Não há nome, telefone nem e-mail envolvidos.</p>
+        <p>Como em qualquer site, o servidor de hospedagem pode registrar automaticamente alguns dados técnicos de acesso: endereço IP, data e hora, tipo de navegador e dispositivo. Esses registros ficam sob a guarda de <span class="marcador">[PROVEDOR DE HOSPEDAGEM]</span>, conforme o art. 15 do Marco Civil da Internet.</p>
+        <p>A cotação do Bitcoin exibida no topo é consultada na API pública da <strong>CoinGecko</strong>, que recebe o endereço IP e dados básicos do navegador no momento da consulta.</p>
+
+        <h3>2. Finalidade do tratamento</h3>
+        <p>A página existe para <strong>encaminhar o visitante ao canal que ele escolher</strong> e para <strong>medir o resultado dos anúncios</strong> que trazem essas visitas. Não há disparo de mensagens em massa, venda ou cessão de dados.</p>
+
+        <h3>3. Base legal do tratamento</h3>
+        <ul>
+          <li><strong>Art. 7º, IX, da LGPD</strong>: legítimo interesse, restrito à operação técnica da página e à medição de anúncios, sujeita à oposição do titular;</li>
+          <li><strong>Art. 7º, II, da LGPD</strong> e <strong>art. 15 do Marco Civil da Internet</strong>: guarda de registros de acesso, quando aplicável;</li>
+          <li><strong>Art. 7º, V, da LGPD</strong>: procedimentos preliminares a contrato, quando você segue para um dos serviços de destino e informa seus dados <em>lá</em>.</li>
+        </ul>
+
+        <h3>4. Serviços de terceiros</h3>
+        <p>No carregamento da página há contato com o <strong>Google Fonts</strong> (tipografias), a <strong>CoinGecko</strong> (cotação), a <strong>Meta Platforms</strong> (item 5) e o provedor de hospedagem.</p>
+        <p>Ao clicar em um botão, você é levado a um serviço externo com política de privacidade própria: renato38.com.br, Missão Bitcoin (PagTickets), Livraria Alexandre Costa, Lex Bitcoin, WhatsApp, Telegram, YouTube, Substack, Primal (Nostr), X, Instagram, Binance, Bybit, Noxpay e Stackbit. O tratamento feito dentro desses serviços não é controlado por esta página.</p>
+
+        <h3>5. Cookies e tecnologias de rastreamento</h3>
+        <p>Esta página pode utilizar o <strong>Meta Pixel</strong> e a <strong>API de Conversões da Meta</strong> para medir o resultado dos anúncios. Não há Google Analytics, Google Tag Manager nem outra ferramenta de rastreamento.</p>
+        <p>São registrados a visita e qual botão foi clicado. Para isso são gravados no navegador os cookies <strong>_fbp</strong> e <strong>_fbc</strong>, da Meta, e um identificador interno (<strong>_ln_id</strong>, também em armazenamento local). Eles duram até <strong>180 dias</strong> e servem apenas à medição de anúncios. Você pode apagá-los no navegador sem prejuízo para o uso da página.</p>
+
+        <h3>6. Direitos do titular</h3>
+        <p>Nos termos do art. 18 da LGPD, você pode pedir confirmação de tratamento, acesso, correção, anonimização, eliminação, portabilidade, informação sobre compartilhamento e revogação do consentimento.</p>
+
+        <h3>7. Contato</h3>
+        <p>Pedidos sobre seus dados: <span class="marcador">[E-MAIL DE CONTATO]</span>. Encarregado (DPO): <span class="marcador">[NOME DO ENCARREGADO / "não designado"]</span>.</p>
+
+        <h3>8. Alterações</h3>
+        <p>A versão vigente é sempre a exibida nesta página, com a data de atualização indicada no topo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- Termos de Uso ---------- -->
+  <div class="modal" id="modalTermos" role="dialog" aria-modal="true" aria-labelledby="tituloTermos" hidden>
+    <div class="modal__fundo" data-fechar></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <div>
+          <h2 id="tituloTermos">Termos de Uso</h2>
+          <p class="atualizado">Última atualização: <span class="marcador">[INSERIR DATA]</span></p>
+        </div>
+        <button type="button" class="modal__fechar" data-fechar aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal__corpo" tabindex="0">
+        <p>Estes Termos regulam o uso desta página de links de <strong>Renato Trezoitão</strong> (<span class="marcador">[RAZÃO SOCIAL]</span>, CNPJ <span class="marcador">[CNPJ]</span>). Ao navegar ou clicar em qualquer botão, você declara que leu e concorda com as condições abaixo.</p>
+
+        <h3>1. Objeto da página</h3>
+        <p>Finalidade exclusivamente informativa: reunir os canais oficiais de @r38tao. <strong>Nenhuma compra ou pagamento é feito aqui.</strong> Cada botão abre um serviço externo, e a partir do clique valem os termos desse serviço.</p>
+
+        <h3>2. Não é recomendação de investimento</h3>
+        <p>Os conteúdos, a cotação exibida e os serviços indicados têm caráter educativo e informativo. Nada nesta página constitui recomendação de compra ou venda de ativos. Criptoativos têm alta volatilidade; decida com base na sua própria pesquisa.</p>
+
+        <h3>3. Links de parceiros</h3>
+        <p>Alguns links (como Binance, Bybit, Noxpay e Stackbit) são de afiliado ou trazem cupom, e podem gerar comissão sem custo extra para você. Preços, taxas, cupons e condições são definidos pelos parceiros e podem mudar sem aviso.</p>
+
+        <h3>4. Cotação do Bitcoin</h3>
+        <p>O valor exibido no topo vem de fonte pública (CoinGecko), é atualizado a cada minuto e serve apenas como referência. Pode haver atraso ou indisponibilidade.</p>
+
+        <h3>5. Propriedade intelectual</h3>
+        <p>Nome, imagem e textos desta página pertencem a Renato Trezoitão. As marcas citadas pertencem a seus titulares e aparecem apenas para identificar os canais. Tipografias Inter e JetBrains Mono sob a SIL Open Font License.</p>
+
+        <h3>6. Disponibilidade</h3>
+        <p>Empregamos esforços razoáveis para manter os links corretos, sem garantia de funcionamento ininterrupto. Nada nestes Termos afasta os direitos do Código de Defesa do Consumidor.</p>
+
+        <h3>7. Privacidade</h3>
+        <p>O tratamento de dados está descrito na <strong>Política de Privacidade</strong>, parte integrante destes Termos.</p>
+
+        <h3>8. Lei aplicável e foro</h3>
+        <p>Aplica-se a legislação brasileira. Foro da comarca de <span class="marcador">[CIDADE/UF]</span>, ressalvado o foro do domicílio do consumidor.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- Calendário (pop-up) ----------
+       Preenchido pelo eventos.js a partir da lista AGENDA. -->
+  <div class="modal modal--cal" id="modalCalendario" role="dialog" aria-modal="true" aria-labelledby="tituloCal" hidden>
+    <div class="modal__fundo" data-fechar></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <div>
+          <h2 id="tituloCal">Calendário</h2>
+          <p class="atualizado">Encontros presenciais</p>
+        </div>
+        <button type="button" class="modal__fechar" data-fechar aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal__corpo cal" tabindex="0">
+        <div class="cal__mes">
+          <button type="button" class="cal__nav" data-mes="-1" aria-label="Mês anterior"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg></button>
+          <b class="cal__nome" aria-live="polite"></b>
+          <button type="button" class="cal__nav" data-mes="1" aria-label="Próximo mês"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></button>
+        </div>
+        <div class="cal__semana" aria-hidden="true"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
+        <div class="cal__dias"></div>
+        <h3>Neste mês</h3>
+        <div class="cal__lista"></div>
+        <h3>Datas a confirmar</h3>
+        <p class="cal__dica">Entre no grupo da cidade para ser avisado quando a data sair.</p>
+        <div class="cal__pendentes"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="eventos.js" defer></script>
+</body>
+</html>

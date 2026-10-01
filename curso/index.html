@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!-- Rastreio: o mesmo da página de links (ver ../LEIA-ME.md). Pixel vazio = nada sai. -->
+  <script>window.LN_TRACK = { pixel: '', capi: '../capi.php' };</script>
+  <script>if (LN_TRACK.pixel) { var t = document.createElement('script'); t.src = '../tracking.js'; document.head.appendChild(t); }</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Renato 'Trezoitão' Amoedo | Bitcoin, Cristianismo e Soberania Individual</title>
+  <meta name="description" content="Bitcoin é liberdade. O futuro da sua família nas suas mãos.">
+  <meta name="theme-color" content="#0E0E11">
+  <meta property="og:title" content="Renato 38 · Bitcoin é liberdade.">
+  <meta property="og:description" content="O futuro da sua família nas suas mãos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/renato-recorte.webp">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Jersey+10&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Jersey+10&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="curso.css">
+  <script>
+  (function(){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.className+=" anim";}catch(e){}})();
+  </script>
+</head>
+<body class="pg-curso">
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg__glow bg__glow--1"></div>
+    <div class="bg__glow bg__glow--2"></div>
+    <div class="bg__grade"></div>
+  </div>
+
+  <!-- ================= HEADER (receita do site da GR Brands) =================
+       No topo é uma barra da largura da tela. Ao rolar, vira uma pílula
+       flutuante com contorno e sombra. O link da seção atual ganha o fio
+       laranja embaixo. No mobile, o hambúrguer abre o menu numerado. -->
+  <header class="cab" id="cab">
+    <a class="cab__marca" href="#topo" aria-label="Renato 38, início">
+      <span>Renato 38<i>.</i></span>
+    </a>
+    <nav class="cab__nav" aria-label="Navegação principal">
+      <a href="#cursos" data-secao="Cursos">Cursos</a>
+      <a href="#mentoria" data-secao="Mentorias">Mentorias</a>
+      <a href="#faq" data-secao="FAQ">FAQ</a>
+    </nav>
+    <a class="cab__cta" data-cta="curso" data-nome="Multisig na Prática" href="https://renato38.com.br/curso/multisig-na-pratica/" target="_blank" rel="noopener">PRÉ-VENDA 50% OFF</a>
+    <button class="cab__burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-m"><span></span><span></span><span></span></button>
+  </header>
+
+  <div class="menu-m" id="menu-m" hidden>
+    <nav aria-label="Navegação mobile">
+      <a href="#cursos"><i>01</i>Cursos</a>
+      <a href="#mentoria"><i>02</i>Mentorias</a>
+      <a href="#faq"><i>03</i>FAQ</a>
+      <a href="https://renato38.com.br/curso/multisig-na-pratica/" target="_blank" rel="noopener" data-cta="curso" data-nome="Multisig na Prática"><i>04</i>PRÉ-VENDA 50% OFF</a>
+    </nav>
+  </div>
+
+  <main class="cs" id="topo">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero-a cena" data-secao="Início">
+      <p class="eyebrow-c a">Renato Trezoitão</p>
+      <h1 class="hero-a__titulo a">Bitcoin é <em>liberdade.</em></h1>
+      <p class="hero-a__sub a">O futuro da sua família nas suas mãos.</p>
+      <div class="hero-a__botoes a">
+        <a class="btn-l" href="#cursos">Ver Cursos <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></svg></a>
+        <a class="btn-link" href="#ebook">E-books Grátis <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      </div>
+      <div class="hero-a__palco a" aria-hidden="true">
+        <span class="hero-a__halo"></span>
+        <img src="assets/renato-recorte.webp" alt="" width="542" height="540" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- "É ou não é?" sobe de trás da fita de fotos, como o "É o quê? Hm?" -->
+    <p class="pergunta-sobe pergunta-sobe--hero">É ou não é?</p>
+
+    <!-- ================= FITA DE FOTOS (eventos) ================= -->
+    <div class="fita" aria-hidden="true"><div class="fita__trilho"><div class="fita__item"><img src="assets/fotos/evento-01.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-02.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-03.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-04.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-05.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-06.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-07.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-08.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-09.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-10.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div><div class="fita__item"><img src="assets/fotos/evento-11.webp" alt="" width="640" height="385" loading="lazy" decoding="async"></div></div></div>
+
+    <!-- ================= TREINAMENTOS ================= -->
+    <section class="bloco cena" id="cursos" data-secao="Cursos" aria-labelledby="t-cursos">
+      <div class="bloco__cabeca a">
+        <h2 class="bloco__titulo" id="t-cursos">Treinamentos<sup>04</sup></h2>
+        <p class="bloco__nota">Pagamento via PIX, Cartão de Crédito ou Bitcoin com desconto (BTC onchain ou Lightning).</p>
+      </div>
+      <!-- vitrine com seletor: a lista escolhe, o painel mostra.
+           Sem JS, os quatro painéis aparecem em sequência. -->
+      <div class="vitrine a">
+        <div class="vitrine__lista" role="tablist" aria-label="Treinamentos" aria-orientation="vertical">
+          <button type="button" class="vitrine__aba" role="tab" id="aba-01" aria-controls="painel-01" aria-selected="false" tabindex="-1">
+            <span class="vitrine__n">01</span>
+            <span class="vitrine__aba-nome">Autocustódia com RENATO 38</span>
+            <span class="vitrine__aba-preco">R$ 400,00</span>
+            <span class="vitrine__aba-seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+          </button>
+          <button type="button" class="vitrine__aba" role="tab" id="aba-02" aria-controls="painel-02" aria-selected="true" tabindex="0">
+            <span class="vitrine__n">02</span>
+            <span class="vitrine__aba-nome">Multisig na Prática</span>
+            <span class="vitrine__aba-preco">R$ 400,00</span>
+            <span class="vitrine__aba-seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+          </button>
+          <button type="button" class="vitrine__aba" role="tab" id="aba-03" aria-controls="painel-03" aria-selected="false" tabindex="-1">
+            <span class="vitrine__n">03</span>
+            <span class="vitrine__aba-nome">Lex BTC</span>
+            <span class="vitrine__aba-preco">R$ 2.500,00</span>
+            <span class="vitrine__aba-seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+          </button>
+          <button type="button" class="vitrine__aba" role="tab" id="aba-04" aria-controls="painel-04" aria-selected="false" tabindex="-1">
+            <span class="vitrine__n">04</span>
+            <span class="vitrine__aba-nome">Operando Derivativos: Futuros e Opções</span>
+            <span class="vitrine__aba-preco">R$ 5.000,00</span>
+            <span class="vitrine__aba-seta"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+          </button>
+        </div>
+        <div class="vitrine__paineis">
+          <article class="vitrine__painel" role="tabpanel" id="painel-01" aria-labelledby="aba-01" tabindex="0">
+            <span class="vitrine__marca-d-agua" aria-hidden="true">01</span>
+            <div class="vitrine__topo">
+              <span class="vitrine__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg></span>
+              
+            </div>
+            <h3 class="vitrine__nome">Autocustódia com RENATO 38</h3>
+            <p class="vitrine__texto">Proteja seu patrimônio com o único ativo que pode, de fato, ser 100% seu. Autocustódia do simples ao avançado: Geração e proteção de chaves, hardware wallets e operação real, online e offline.</p>
+            <ul class="vitrine__itens"><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de acesso à plataforma</li><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de suporte</li></ul>
+            <div class="vitrine__rodape">
+              <div class="vitrine__preco">
+                
+                <p class="vitrine__valor"><b>R$ 400,00</b></p>
+                <p class="vitrine__formas"><span class="nobr">no cartão R$ 440,00 (até 12x)</span> · <span class="nobr">em BTC R$ 350,00</span></p>
+              </div>
+              <div class="vitrine__acoes">
+                <a class="btn-l vitrine__cta" data-cta="curso" data-nome="Autocustódia com RENATO 38" href="https://renato38.com.br/#products" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"/></svg> Comprar Agora</a>
+                
+              </div>
+            </div>
+          </article>
+          <article class="vitrine__painel vitrine__painel--destaque" role="tabpanel" id="painel-02" aria-labelledby="aba-02" tabindex="0">
+            <span class="vitrine__marca-d-agua" aria-hidden="true">02</span>
+            <div class="vitrine__topo">
+              <span class="vitrine__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M216.57,39.43A80,80,0,0,0,83.91,120.78L28.69,176A15.86,15.86,0,0,0,24,187.31V216a16,16,0,0,0,16,16H72a8,8,0,0,0,8-8V208H96a8,8,0,0,0,8-8V184h16a8,8,0,0,0,5.66-2.34l9.56-9.57A79.73,79.73,0,0,0,160,176h.1A80,80,0,0,0,216.57,39.43ZM224,98.1c-1.09,34.09-29.75,61.86-63.89,61.9H160a63.7,63.7,0,0,1-23.65-4.51,8,8,0,0,0-8.84,1.68L116.69,168H96a8,8,0,0,0-8,8v16H72a8,8,0,0,0-8,8v16H40V187.31l58.83-58.82a8,8,0,0,0,1.68-8.84A63.72,63.72,0,0,1,96,95.92c0-34.14,27.81-62.8,61.9-63.89A64,64,0,0,1,224,98.1ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></span>
+              <span class="vitrine__tags"><span class="chip chip--laranja">PRÉ-VENDA</span><span class="chip chip--laranja">Lança em 2026</span></span>
+            </div>
+            <h3 class="vitrine__nome">Multisig na Prática</h3>
+            <p class="vitrine__texto">O treinamento intermediário de autocustódia, na prática: multisig, pastas secretas e assinaturas offline.</p>
+            <ul class="vitrine__itens"><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de acesso à plataforma</li><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de suporte</li></ul>
+            <div class="vitrine__rodape">
+              <div class="vitrine__preco">
+                <p class="vitrine__oferta">🔥 OFERTA POR TEMPO LIMITADO: 50% OFF</p>
+                <p class="vitrine__valor"><s>R$ 800,00</s><span class="vitrine__desc">-50%</span><b>R$ 400,00</b></p>
+                <p class="vitrine__formas"><span class="nobr">no cartão R$ 440,00 (até 12x)</span> · <span class="nobr">em BTC R$ 350,00</span></p>
+              </div>
+              <div class="vitrine__acoes">
+                <a class="btn-l vitrine__cta" data-cta="curso" data-nome="Multisig na Prática" href="https://renato38.com.br/curso/multisig-na-pratica/" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg> Garantir Pré-venda</a>
+                <a class="vitrine__mais" data-cta="curso" data-nome="Multisig na Prática" href="https://renato38.com.br/curso/multisig-na-pratica/" target="_blank" rel="noopener">SAIBA MAIS<span><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+              </div>
+            </div>
+          </article>
+          <article class="vitrine__painel" role="tabpanel" id="painel-03" aria-labelledby="aba-03" tabindex="0">
+            <span class="vitrine__marca-d-agua" aria-hidden="true">03</span>
+            <div class="vitrine__topo">
+              <span class="vitrine__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,160.57,133a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32A7.92,7.92,0,0,0,239.43,133ZM56,184c-7.53,0-22.76-3.61-23.93-14.64L56,109.54l23.93,59.82C78.76,180.39,63.53,184,56,184Zm144-32c-7.53,0-22.76-3.61-23.93-14.64L200,77.54l23.93,59.82C222.76,148.39,207.53,152,200,152Z"/></svg></span>
+              
+            </div>
+            <h3 class="vitrine__nome">Lex BTC</h3>
+            <p class="vitrine__texto">Treinamento avançado: Multisig, arbitragem e planejamento sucessório.</p>
+            <ul class="vitrine__itens"><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de acesso à plataforma</li><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de suporte</li></ul>
+            <div class="vitrine__rodape">
+              <div class="vitrine__preco">
+                
+                <p class="vitrine__valor"><b>R$ 2.500,00</b></p>
+                <p class="vitrine__formas"><span class="nobr">no cartão R$ 3.000,00 (até 12x)</span> · <span class="nobr">em BTC R$ 2.000,00</span></p>
+              </div>
+              <div class="vitrine__acoes">
+                <a class="btn-l vitrine__cta" data-cta="curso" data-nome="Lex BTC" href="https://renato38.com.br/#products" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"/></svg> Comprar Agora</a>
+                
+              </div>
+            </div>
+          </article>
+          <article class="vitrine__painel" role="tabpanel" id="painel-04" aria-labelledby="aba-04" tabindex="0">
+            <span class="vitrine__marca-d-agua" aria-hidden="true">04</span>
+            <div class="vitrine__topo">
+              <span class="vitrine__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V156.69l50.34-50.35a8,8,0,0,1,11.32,0L128,132.69,180.69,80H160a8,8,0,0,1,0-16h40a8,8,0,0,1,8,8v40a8,8,0,0,1-16,0V91.31l-58.34,58.35a8,8,0,0,1-11.32,0L96,123.31l-56,56V200H224A8,8,0,0,1,232,208Z"/></svg></span>
+              
+            </div>
+            <h3 class="vitrine__nome">Operando Derivativos: Futuros e Opções</h3>
+            <p class="vitrine__texto">Proteja seu BTC e gere renda em dólar. Estratégias de hedge, opções e renda recorrente com mais de 1000 alunos formados e 20 anos de didática.</p>
+            <ul class="vitrine__itens"><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de acesso à plataforma</li><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>12 meses de suporte</li><li><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg>3 meses de mentoria em grupo</li></ul>
+            <div class="vitrine__rodape">
+              <div class="vitrine__preco">
+                
+                <p class="vitrine__valor"><b>R$ 5.000,00</b></p>
+                <p class="vitrine__formas"><span class="nobr">no cartão R$ 6.000,00 (até 12x)</span> · <span class="nobr">em BTC R$ 4.000,00</span></p>
+              </div>
+              <div class="vitrine__acoes">
+                <a class="btn-l vitrine__cta" data-cta="curso" data-nome="Operando Derivativos: Futuros e Opções" href="https://renato38.com.br/curso/derivativos/" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"/></svg> Comprar Agora</a>
+                <a class="vitrine__mais" data-cta="curso" data-nome="Operando Derivativos: Futuros e Opções" href="https://renato38.com.br/curso/derivativos/" target="_blank" rel="noopener">Saiba Mais<span><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENTORIA ================= -->
+    <section class="bloco cena" id="mentoria" data-secao="Mentorias" aria-labelledby="t-mentoria">
+      <div class="mentoria-a">
+        <div class="mentoria-a__foto a"><img src="assets/renato-mentoria.webp" alt="Renato Trezoitão" width="946" height="808" loading="lazy"></div>
+        <div class="mentoria-a__texto">
+          <span class="chip chip--laranja a">NOVIDADE</span>
+          <h2 class="mentoria-a__titulo a" id="t-mentoria">Mentoria Individual</h2>
+          <p class="mentoria-a__lead a">Acompanhamento 1:1 ao vivo para acelerar a sua jornada do plano à execução.</p>
+          <ul class="mentoria-a__itens">
+            <li class="a"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Sessões ao vivo, só suas: atenção individual de verdade</span></li>
+            <li class="a"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Plano personalizado para o seu momento e os seus objetivos</span></li>
+            <li class="a"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Agende no seu ritmo, direto pelo site</span></li>
+          </ul>
+          <a class="btn-l a" data-cta="mentoria" data-nome="Mentoria Individual" href="https://renato38.com.br/mentoria/" target="_blank" rel="noopener">Conhecer a Mentoria <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENTOS ================= -->
+    <!-- "É o quê? Hm?" fica atrás do banner e sobe de trás dele com a rolagem -->
+    <section class="bloco cena eventos-a" data-secao="Eventos" aria-label="Eventos presenciais">
+      <p class="pergunta-sobe">É o quê? Hm?</p>
+      <a class="missao-a a" href="https://missaobitcoin.com.br/" target="_blank" rel="noopener">
+        <img src="assets/missao.webp" alt="Eventos presenciais com Renato Trezoitão. Missão Bitcoin, missaobitcoin.com.br" width="1200" height="400" loading="lazy">
+      </a>
+    </section>
+
+    <!-- ================= E-BOOK ================= -->
+    <section class="bloco cena" id="ebook" data-secao="E-books" aria-labelledby="t-ebook">
+      <div class="ebook-a a">
+        <div class="ebook-a__texto">
+          <h2 class="ebook-a__titulo" id="t-ebook">Seu primeiro passo para a soberania</h2>
+          <p class="ebook-a__sub">Escolha o e-book que mais combina com você e baixe gratuitamente.</p>
+          <!-- o livro é desenhado em CSS: capa, lombada e páginas -->
+          <figure class="livro" aria-label="BTC RedPill 3ª Edição">
+            <div class="livro__cena" aria-hidden="true">
+              <div class="livro__obj">
+                <img class="livro__frente" src="assets/capa-livro.webp" alt="" width="1200" height="1808" loading="lazy">
+                <span class="livro__paginas"></span>
+                <span class="livro__lombada"></span>
+                <span class="livro__topo"></span>
+                <span class="livro__verso"></span>
+              </div>
+              <span class="livro__sombra"></span>
+            </div>
+          </figure>
+        </div>
+        <form class="form" novalidate>
+          <p class="form__intro">Preencha seus dados para receber o e-book por <span class="nobr">e-mail</span></p>
+          <label class="campo"><span>Nome completo *</span><span class="campo__caixa"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg><input name="nome" autocomplete="name" required></span></label>
+          <label class="campo"><span>E-mail *</span><span class="campo__caixa"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg><input name="email" type="email" autocomplete="email" required></span></label>
+          <label class="campo"><span>Telefone (WhatsApp)</span><span class="campo__caixa"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg><input name="telefone" type="tel" autocomplete="tel" placeholder="Ex: +55 11 98888-7777"></span></label>
+          <label class="aceite"><input type="checkbox" name="aceite" required><span class="aceite__caixa" aria-hidden="true"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg></span><span>Autorizo o uso dos meus dados para fins de comunicação e envio de materiais, conforme a <button type="button" class="link" data-modal="modalPrivacidade">Política de Privacidade</button></span></label>
+          <button class="btn-l form__enviar" type="submit">Baixar E-book Grátis <svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"/></svg></button>
+          <p class="form__nota" role="status">Prometemos não enviar spam. Você pode cancelar a inscrição a qualquer momento.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= MANIFESTO (palavras acendem com a rolagem) ================= -->
+    <section class="manifesto-a" aria-label="Manifesto">
+      <p class="manifesto-a__frase"><span>Eu</span> <span>acredito</span> <span>que</span> <span>você</span> <span>merece</span> <span>controle</span> <span>total</span> <span>sobre</span> <span>seu</span> <span>dinheiro.</span></p>
+      <p class="manifesto-a__linha">Sem bancos. Sem governos. Sem mentiras.</p>
+      <p class="manifesto-a__linha">Bitcoin é a ferramenta. Autocustódia é o caminho.</p>
+      <p class="manifesto-a__pergunta">É isso ou não?</p>
+    </section>
+
+    <!-- ================= VERIFICAR ================= -->
+    <section class="bloco cena" aria-labelledby="t-verificar">
+      <div class="verificar-a a">
+        <div class="verificar-a__texto">
+          <span class="verificar-a__ico"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg></span>
+          <h2 class="verificar-a__titulo" id="t-verificar">Algum representante entrou em contato com você?</h2>
+          <p class="verificar-a__sub">Verifique nossos números oficiais:</p>
+        </div>
+        <form class="verificar__form" novalidate>
+          <label class="verificar__rotulo" for="tel-verificar">Número de telefone</label>
+          <div class="verificar__barra">
+            <span class="verificar__tel" aria-hidden="true"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg></span>
+            <input id="tel-verificar" type="tel" inputmode="tel" placeholder="Ex: +55 11 98888-7777" autocomplete="off">
+            <button class="verificar__botao" type="submit"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg><span>VERIFICAR</span></button>
+          </div>
+          <p class="verificar__res" role="status" hidden></p>
+          <template id="ico-ok"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></template>
+          <template id="ico-nao"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg></template>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="bloco cena" id="faq" data-secao="FAQ" aria-labelledby="t-faq">
+      <div class="bloco__cabeca a">
+        <h2 class="bloco__titulo" id="t-faq">Perguntas Frequentes</h2>
+      </div>
+      <div class="faq">
+        <details class="faq__item a">
+          <summary>O que é autocustódia?<span class="faq__mais"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p>Ser seu próprio banco. Seu dinheiro, suas chaves, sem intermediários. Ninguém te rouba, ninguém congela, ninguém controla.</p>
+        </details>
+        <details class="faq__item a">
+          <summary>Bitcoin não é muito volátil?<span class="faq__mais"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p>Curto prazo é imprevisível, longo prazo é inevitável. Quem entende isso dorme tranquilo.</p>
+        </details>
+        <details class="faq__item a">
+          <summary>E se o governo proibir?<span class="faq__mais"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p>Governos não podem proibir matemática. Bitcoin é um protocolo, não uma empresa. Não tem CEO, não tem sede, não tem botão de desligar.</p>
+        </details>
+        <details class="faq__item a">
+          <summary>Por que Bitcoin e não outras criptos?<span class="faq__mais"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p>Bitcoin é verdade. O resto é mentira. Só existe um dinheiro descentralizado de verdade, e é o Bitcoin.</p>
+        </details>
+        <details class="faq__item a">
+          <summary>Preciso saber de tecnologia?<span class="faq__mais"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p>Se você sabe usar WhatsApp, você consegue. Autocustódia é mais simples do que parece.</p>
+        </details>
+        <details class="faq__item a">
+          <summary>Bitcoin é para quem?<span class="faq__mais"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span></summary>
+          <p>Para quem quer o futuro da família nas próprias mãos. Para quem entendeu que dinheiro de papel é mentira e quer proteger seu patrimônio.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape-a cena">
+      <div class="rodape-a__marca a">
+        <b class="digita" role="img" aria-label="R38"><span class="digita__texto" aria-hidden="true">R<em>38</em></span><i class="digita__cursor" aria-hidden="true"></i></b>
+        <nav class="rodape-a__redes" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/r38tao/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg></a>
+          <a href="https://x.com/R38TAO" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"/></svg></a>
+          <a href="https://www.youtube.com/@rotinadotrezoitao" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg></a>
+        </nav>
+        <p class="rodape-a__arrobas"><span>@r38tao</span><span>@R38TAO</span><span>@rotinadotrezoitao</span></p>
+      </div>
+      <div class="rodape-a__legal a">
+        <b>Legal</b>
+        <button type="button" class="link-r" data-modal="modalPrivacidade">Termos e Privacidade</button>
+        <a class="link-r" href="https://renato38.com.br/politica-de-cookies/" target="_blank" rel="noopener">Política de Cookies</a>
+      </div>
+      <p class="rodape-a__base a">
+        <span>© <span id="ano">2026</span> R38. Todos os direitos reservados.</span>
+        <span>Desenvolvido por <a href="https://grbrands.com.br" target="_blank" rel="noopener">GR Brands<span class="ponto-gr">.</span></a></span>
+      </p>
+    </footer>
+  </main>
+
+  <!-- ============================================================
+       MODAIS: abrem sobre a própria página, sem recarregar nem navegar
+       ============================================================ -->
+
+  <!-- ---------- Política de Privacidade ---------- -->
+  <div class="modal" id="modalPrivacidade" role="dialog" aria-modal="true" aria-labelledby="tituloPrivacidade" hidden>
+    <div class="modal__fundo" data-fechar></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <div>
+          <h2 id="tituloPrivacidade">Política de Privacidade</h2>
+          <p class="atualizado">Última atualização: <span class="marcador">[INSERIR DATA]</span></p>
+        </div>
+        <button type="button" class="modal__fechar" data-fechar aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal__corpo" tabindex="0">
+        <p>Esta Política descreve como <strong>Renato Trezoitão</strong> (<span class="marcador">[RAZÃO SOCIAL]</span>, CNPJ <span class="marcador">[CNPJ]</span>, com sede em <span class="marcador">[ENDEREÇO COMPLETO]</span>) trata dados pessoais nesta página, em conformidade com a Lei nº 13.709/2018, a Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+        <p>Esta é uma <strong>página de links</strong>: sua única função é reunir em uma tela os canais oficiais de @r38tao. Ela não possui formulário, cadastro, área de login nem processamento de pagamentos.</p>
+
+        <h3>1. Quais dados são coletados por esta página</h3>
+        <p><strong>Nenhum dado pessoal é solicitado ou digitado aqui.</strong> Não há campos para preencher e a página não mantém banco de dados próprio.</p>
+        <p>A página registra, para medição de anúncios, a visita e o botão clicado, associados a identificadores de navegador descritos no <strong>item 5</strong>. Não há nome, telefone nem e-mail envolvidos.</p>
+        <p>Como em qualquer site, o servidor de hospedagem pode registrar automaticamente alguns dados técnicos de acesso: endereço IP, data e hora, tipo de navegador e dispositivo. Esses registros ficam sob a guarda de <span class="marcador">[PROVEDOR DE HOSPEDAGEM]</span>, conforme o art. 15 do Marco Civil da Internet.</p>
+        <p>A cotação do Bitcoin exibida no topo é consultada na API pública da <strong>CoinGecko</strong>, que recebe o endereço IP e dados básicos do navegador no momento da consulta.</p>
+
+        <h3>2. Finalidade do tratamento</h3>
+        <p>A página existe para <strong>encaminhar o visitante ao canal que ele escolher</strong> e para <strong>medir o resultado dos anúncios</strong> que trazem essas visitas. Não há disparo de mensagens em massa, venda ou cessão de dados.</p>
+
+        <h3>3. Base legal do tratamento</h3>
+        <ul>
+          <li><strong>Art. 7º, IX, da LGPD</strong>: legítimo interesse, restrito à operação técnica da página e à medição de anúncios, sujeita à oposição do titular;</li>
+          <li><strong>Art. 7º, II, da LGPD</strong> e <strong>art. 15 do Marco Civil da Internet</strong>: guarda de registros de acesso, quando aplicável;</li>
+          <li><strong>Art. 7º, V, da LGPD</strong>: procedimentos preliminares a contrato, quando você segue para um dos serviços de destino e informa seus dados <em>lá</em>.</li>
+        </ul>
+
+        <h3>4. Serviços de terceiros</h3>
+        <p>No carregamento da página há contato com o <strong>Google Fonts</strong> (tipografias), a <strong>CoinGecko</strong> (cotação), a <strong>Meta Platforms</strong> (item 5) e o provedor de hospedagem.</p>
+        <p>Ao clicar em um botão, você é levado a um serviço externo com política de privacidade própria: renato38.com.br, Missão Bitcoin (PagTickets), Livraria Alexandre Costa, Lex Bitcoin, WhatsApp, Telegram, YouTube, Substack, Primal (Nostr), X, Instagram, Binance, Bybit, Noxpay e Stackbit. O tratamento feito dentro desses serviços não é controlado por esta página.</p>
+
+        <h3>5. Cookies e tecnologias de rastreamento</h3>
+        <p>Esta página pode utilizar o <strong>Meta Pixel</strong> e a <strong>API de Conversões da Meta</strong> para medir o resultado dos anúncios. Não há Google Analytics, Google Tag Manager nem outra ferramenta de rastreamento.</p>
+        <p>São registrados a visita e qual botão foi clicado. Para isso são gravados no navegador os cookies <strong>_fbp</strong> e <strong>_fbc</strong>, da Meta, e um identificador interno (<strong>_ln_id</strong>, também em armazenamento local). Eles duram até <strong>180 dias</strong> e servem apenas à medição de anúncios. Você pode apagá-los no navegador sem prejuízo para o uso da página.</p>
+
+        <h3>6. Direitos do titular</h3>
+        <p>Nos termos do art. 18 da LGPD, você pode pedir confirmação de tratamento, acesso, correção, anonimização, eliminação, portabilidade, informação sobre compartilhamento e revogação do consentimento.</p>
+
+        <h3>7. Contato</h3>
+        <p>Pedidos sobre seus dados: <span class="marcador">[E-MAIL DE CONTATO]</span>. Encarregado (DPO): <span class="marcador">[NOME DO ENCARREGADO / "não designado"]</span>.</p>
+
+        <h3>8. Alterações</h3>
+        <p>A versão vigente é sempre a exibida nesta página, com a data de atualização indicada no topo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- Termos de Uso ---------- -->
+  <div class="modal" id="modalTermos" role="dialog" aria-modal="true" aria-labelledby="tituloTermos" hidden>
+    <div class="modal__fundo" data-fechar></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <div>
+          <h2 id="tituloTermos">Termos de Uso</h2>
+          <p class="atualizado">Última atualização: <span class="marcador">[INSERIR DATA]</span></p>
+        </div>
+        <button type="button" class="modal__fechar" data-fechar aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal__corpo" tabindex="0">
+        <p>Estes Termos regulam o uso desta página de links de <strong>Renato Trezoitão</strong> (<span class="marcador">[RAZÃO SOCIAL]</span>, CNPJ <span class="marcador">[CNPJ]</span>). Ao navegar ou clicar em qualquer botão, você declara que leu e concorda com as condições abaixo.</p>
+
+        <h3>1. Objeto da página</h3>
+        <p>Finalidade exclusivamente informativa: reunir os canais oficiais de @r38tao. <strong>Nenhuma compra ou pagamento é feito aqui.</strong> Cada botão abre um serviço externo, e a partir do clique valem os termos desse serviço.</p>
+
+        <h3>2. Não é recomendação de investimento</h3>
+        <p>Os conteúdos, a cotação exibida e os serviços indicados têm caráter educativo e informativo. Nada nesta página constitui recomendação de compra ou venda de ativos. Criptoativos têm alta volatilidade; decida com base na sua própria pesquisa.</p>
+
+        <h3>3. Links de parceiros</h3>
+        <p>Alguns links (como Binance, Bybit, Noxpay e Stackbit) são de afiliado ou trazem cupom, e podem gerar comissão sem custo extra para você. Preços, taxas, cupons e condições são definidos pelos parceiros e podem mudar sem aviso.</p>
+
+        <h3>4. Cotação do Bitcoin</h3>
+        <p>O valor exibido no topo vem de fonte pública (CoinGecko), é atualizado a cada minuto e serve apenas como referência. Pode haver atraso ou indisponibilidade.</p>
+
+        <h3>5. Propriedade intelectual</h3>
+        <p>Nome, imagem e textos desta página pertencem a Renato Trezoitão. As marcas citadas pertencem a seus titulares e aparecem apenas para identificar os canais. Tipografias Inter e JetBrains Mono sob a SIL Open Font License.</p>
+
+        <h3>6. Disponibilidade</h3>
+        <p>Empregamos esforços razoáveis para manter os links corretos, sem garantia de funcionamento ininterrupto. Nada nestes Termos afasta os direitos do Código de Defesa do Consumidor.</p>
+
+        <h3>7. Privacidade</h3>
+        <p>O tratamento de dados está descrito na <strong>Política de Privacidade</strong>, parte integrante destes Termos.</p>
+
+        <h3>8. Lei aplicável e foro</h3>
+        <p>Aplica-se a legislação brasileira. Foro da comarca de <span class="marcador">[CIDADE/UF]</span>, ressalvado o foro do domicílio do consumidor.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="curso.js" defer></script>
+</body>
+</html>
