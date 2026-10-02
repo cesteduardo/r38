@@ -35,6 +35,11 @@ curso/            refeito de renato38.com.br
   aparece na tela, as peças sobem em cascata. Sem JS ou com "reduzir movimento", tudo nasce
   visível. Também há o anel girando na foto, o brilho no card do e-book e as respostas de
   hover e toque.
+- **Hover e toque:** **luz que segue o cursor** (`luz.js`, compartilhado pelas três
+  páginas; o desenho fica no bloco "luz" do `style.css`). Nos botões escuros, um brilho
+  laranja suave acompanha o mouse e o contorno acende só perto dele; nos botões laranja a
+  luz é branca; links de texto clareiam. No toque, o elemento só afunda de leve.
+  Para incluir um elemento novo, acrescente o seletor na lista `ALVOS` do `luz.js`.
 
 Regra da casa, depois da revisão de 01/10/2026: **menos é mais.** Uma linha por link
 (ícone, nome, seta). Nada de numeração, contadores ou subtítulos em toda linha.
@@ -47,7 +52,7 @@ Regra da casa, depois da revisão de 01/10/2026: **menos é mais.** Uma linha po
   direita, rodapé numa linha.
 
 Copiar com um toque: o ícone do Nostr copia a npub, e a etiqueta `38tao · 15%` copia o
-cupom da Stackbit. "Próximos encontros" abre `eventos/`.
+cupom da Stackbit. "Próximos encontros" abre `eventos/` e "Treinamento do Zero" abre `curso/`, na mesma aba.
 
 ## Eventos (`eventos/`)
 
@@ -94,7 +99,7 @@ frases novas são as respostas da verificação de número e a confirmação do 
 - **R38 do rodapé** em fonte pixel, com máquina de escrever: abre em "Renato 38tão" e
   fecha de volta em "R38", com a barra laranja piscando no fim. Só roda com o rodapé na tela.
 - **Mentoria** com foto (original de 946×808), **banner da Missão Bitcoin**, **e-book** no
-  bloco laranja, **manifesto** com as palavras acendendo na rolagem, **verificação de
+  bloco laranja, **manifesto** digitado (cursor laranja piscando, como o R38 do rodapé), **verificação de
   número** e **FAQ**.
 
 Fotos em `curso/assets/` e `curso/assets/fotos/`, todas de `missaobitcoin.com.br`.

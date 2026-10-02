@@ -20,15 +20,12 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 14px 30px -18px rgba(247, 147, 26, .9);
   transition: transform .35s var(--ease), box-shadow .35s, background .2s;
 }
-.btn-l:hover { transform: translateY(-2px); background: #FFA23A; }
 .btn-l:active { transform: scale(.97); transition-duration: .1s; }
 .btn-link {
   display: inline-flex; align-items: center; gap: 8px; height: 52px; padding: 0 8px;
   color: var(--laranja-claro); font-size: 17px; font-weight: 500;
 }
 .btn-link svg { width: 18px; height: 18px; transition: transform .35s var(--ease); }
-.btn-link:hover svg { transform: translateX(4px); }
-.btn-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* =========================================================
    HEADER (receita do site da GR Brands)
@@ -68,8 +65,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1.5px; background: var(--laranja);
   transform: scaleX(0); transform-origin: right; transition: transform .38s var(--ease);
 }
-.cab__nav a:hover, .cab__nav a.atual { color: var(--ink); }
-.cab__nav a:hover::after, .cab__nav a.atual::after { transform: scaleX(1); transform-origin: left; }
+.cab__nav a.atual { color: var(--ink); }
+.cab__nav a.atual::after { transform: scaleX(1); transform-origin: left; }
 
 .cab__cta {
   display: none; align-items: center; height: 50px; padding: 0 26px; border-radius: 999px; flex: none;
@@ -78,7 +75,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   box-shadow: inset 0 0 0 1px rgba(247, 147, 26, .6), inset 0 1px 0 rgba(255, 255, 255, .38), 0 10px 22px -14px rgba(247, 147, 26, .8);
   transition: transform .52s var(--ease-release, var(--ease)), box-shadow .4s;
 }
-.cab__cta:hover { transform: translateY(-1.5px); }
 
 /* hambúrguer de três traços, que vira X */
 .cab__burger {
@@ -159,7 +155,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 .fita:hover .fita__trilho { animation-play-state: paused; }
 .fita__item { flex: none; height: 150px; aspect-ratio: 640 / 385; border-radius: 18px; overflow: hidden; background: var(--card); }
 .fita__item img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9); transition: filter .4s; }
-.fita__item:hover img { filter: saturate(1.1); }
 @keyframes fita { to { transform: translateX(calc(-50% - 6px)); } }
 
 /* =========================================================
@@ -257,28 +252,59 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 .vitrine__cta { width: 100%; height: 56px; font-size: 16.5px; }
 .vitrine__cta svg, .btn-l svg { width: 19px; height: 19px; flex: none; }
 .vitrine__painel:not(.vitrine__painel--destaque) .vitrine__cta { background: var(--ink); color: #17171B; box-shadow: none; }
-.vitrine__painel:not(.vitrine__painel--destaque) .vitrine__cta:hover { background: #fff; }
 .vitrine__mais {
   display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 8px 4px;
   color: var(--ink); font-size: 14.5px; font-weight: 600; transition: color .25s;
 }
 .vitrine__mais span { width: 32px; height: 32px; flex: none; display: grid; place-items: center; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--line); transition: color .25s, box-shadow .25s, transform .4s var(--ease); }
 .vitrine__mais svg { width: 14px; height: 14px; }
-.vitrine__mais:hover { color: var(--laranja); }
-.vitrine__mais:hover span { color: var(--laranja); box-shadow: inset 0 0 0 1px rgba(247, 147, 26, .5); transform: translate(2px, -2px); }
 
-/* ---------- mentoria ---------- */
+/* ---------- mentoria ----------
+   Card cinematográfico: a foto ocupa o card inteiro e se dissolve num
+   degradê escuro onde fica o texto. "Individual" em laranja degradê,
+   como o "liberdade." do hero; cada item com seu ícone num quadrinho
+   de vidro, separados por filete. */
 .mentoria-a {
-  display: grid; overflow: hidden;
-  border-radius: 32px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line);
+  position: relative; isolation: isolate; overflow: hidden;
+  display: grid; border-radius: 32px; background: #141417;
+  box-shadow: inset 0 0 0 1px var(--line), 0 50px 100px -60px rgba(0, 0, 0, .95);
 }
-.mentoria-a__foto img { width: 100%; height: 360px; object-fit: cover; object-position: 55% 25%; }
-.mentoria-a__texto { padding: 26px 24px 28px; display: flex; flex-direction: column; align-items: flex-start; }
-.mentoria-a__titulo { margin-top: 14px; font-size: clamp(32px, 4vw, 52px); font-weight: 600; letter-spacing: -.05em; line-height: 1.02; }
-.mentoria-a__lead { margin-top: 12px; color: var(--muted); font-size: 18px; line-height: 1.5; }
-.mentoria-a__itens { list-style: none; margin: 22px 0 26px; display: flex; flex-direction: column; gap: 14px; }
-.mentoria-a__itens li { display: flex; gap: 12px; color: var(--ink-2); font-size: 16px; line-height: 1.45; }
-.mentoria-a__itens svg { width: 20px; height: 20px; margin-top: 1px; color: var(--laranja); }
+.mentoria-a__foto { position: relative; z-index: -1; height: 400px; }
+.mentoria-a__foto img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 55% 20%;
+  -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 40%, transparent 100%);
+  transition: transform 1.6s var(--ease);
+}
+.mentoria-a__texto { position: relative; margin-top: -90px; padding: 0 22px 30px; display: flex; flex-direction: column; align-items: flex-start; }
+
+.mentoria-a__novo { display: inline-flex; align-items: center; gap: 8px; background: rgba(20, 20, 23, .6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.mentoria-a__novo i { width: 7px; height: 7px; border-radius: 50%; background: var(--laranja); box-shadow: 0 0 0 0 rgba(247, 147, 26, .6); animation: radar-l 2s ease-out infinite; }
+@keyframes radar-l { 70% { box-shadow: 0 0 0 7px rgba(247, 147, 26, 0); } 100% { box-shadow: 0 0 0 0 rgba(247, 147, 26, 0); } }
+
+.mentoria-a__titulo { margin-top: 16px; font-size: clamp(40px, 5vw, 72px); font-weight: 600; letter-spacing: -.055em; line-height: .98; }
+.mentoria-a__titulo em {
+  display: inline-block; font-style: normal;
+  background: linear-gradient(180deg, #FFC164 0%, var(--laranja) 60%, #E07B00 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  padding: .06em .08em 0 0; margin-right: -.08em;
+}
+.mentoria-a__lead { margin-top: 16px; max-width: 34ch; color: var(--ink-2); font-size: 18px; line-height: 1.55; }
+.mentoria-a__itens { list-style: none; width: 100%; margin: 28px 0 32px; border-top: 1px solid var(--line); }
+.mentoria-a__itens li {
+  display: flex; align-items: center; gap: 16px;
+  padding: 15px 0; border-bottom: 1px solid var(--line);
+  color: var(--ink); font-size: 16px; line-height: 1.4;
+}
+.mentoria-a__check {
+  flex: none; width: 42px; height: 42px; border-radius: 13px;
+  display: grid; place-items: center;
+  background: linear-gradient(160deg, #34343D, #222228);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08), inset 0 1px 0 rgba(255, 255, 255, .14);
+  color: var(--laranja);
+}
+.mentoria-a__check svg { width: 21px; height: 21px; }
+.mentoria-a__texto .btn-l { height: 58px; padding: 0 32px; font-size: 17px; }
 
 /* ---------- frases que sobem de trás de um bloco ----------
    "É ou não é?" (atrás da fita de fotos) e "É o quê? Hm?" (atrás do
@@ -299,14 +325,71 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   will-change: transform;
 }
 .pergunta-sobe--hero { margin-top: 8px; }
+.pergunta-sobe + * { position: relative; z-index: 1; }
+.bloco--colado { margin-top: 72px; }
 /* o bloco da frente fica por cima da frase */
 .pergunta-sobe + .fita { position: relative; z-index: 1; margin-top: 0; }
-.eventos-a .missao-a { position: relative; z-index: 1; box-shadow: inset 0 0 0 1px var(--line), 0 -30px 60px -20px rgba(23, 23, 27, .9); }
+.eventos-a .missao-a { z-index: 1; box-shadow: inset 0 0 0 1px rgba(247, 147, 26, .22), 0 -30px 60px -20px rgba(23, 23, 27, .9); }
 .nobr { white-space: nowrap; }
 
-.missao-a { display: block; overflow: hidden; border-radius: 28px; box-shadow: inset 0 0 0 1px var(--line); }
-.missao-a img { width: 100%; height: auto; transition: transform 1.4s var(--ease); }
-.missao-a:hover img { transform: scale(1.03); }
+/* banner da Missão Bitcoin, em HTML: texto à esquerda, Renato recortado
+   com halo e a moeda à direita, grafite com brilho laranja e grade */
+.missao-a {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  min-height: 460px; border-radius: 28px;
+  background:
+    radial-gradient(60% 90% at 0% 100%, rgba(247, 147, 26, .32), transparent 60%),
+    radial-gradient(50% 70% at 85% 30%, rgba(247, 147, 26, .2), transparent 65%),
+    linear-gradient(160deg, #1E1A17, #0F0E10 70%);
+  box-shadow: inset 0 0 0 1px rgba(247, 147, 26, .22);
+}
+.missao-a__grade {
+  position: absolute; inset: 0; z-index: -1;
+  background-image: linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse at 30% 50%, #000 10%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 30% 50%, #000 10%, transparent 75%);
+}
+.missao-a__texto { position: relative; z-index: 2; padding: 30px 24px 0; display: flex; flex-direction: column; align-items: flex-start; }
+.missao-a__titulo { font-size: 30px; font-weight: 700; letter-spacing: -.035em; line-height: 1; color: #fff; }
+.missao-a__com { margin-top: 8px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 10px; }
+.missao-a__com span { color: var(--muted); font-size: 18px; font-weight: 500; }
+.missao-a__com b {
+  font-size: 34px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05;
+  background: linear-gradient(180deg, #FFB547, var(--laranja) 55%, #E0590A);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  padding: .14em .06em 0 0; margin-top: -.1em;
+}
+.missao-a__fio { width: 180px; height: 2px; margin: 16px 0 14px; border-radius: 2px; background: linear-gradient(90deg, transparent, var(--laranja), transparent); box-shadow: 0 0 14px rgba(247, 147, 26, .8); }
+.missao-a__logo { width: 190px; height: auto; }
+.missao-a__site {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
+  padding: 10px 16px; border-radius: 999px;
+  background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+  color: #fff; font-size: 15px; font-weight: 600;
+  transition: background .25s, box-shadow .25s;
+}
+.missao-a__site svg { width: 16px; height: 16px; color: var(--laranja); transition: transform .35s var(--ease); }
+
+.missao-a__palco { position: relative; height: 250px; margin-top: -10px; }
+.missao-a__halo {
+  position: absolute; right: 8%; bottom: -30px; width: 280px; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 147, 26, .5), rgba(247, 147, 26, .1) 50%, transparent 70%);
+  filter: blur(8px);
+}
+.missao-a__renato {
+  position: absolute; right: 4%; bottom: 0; height: 100%; width: auto;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+  mask-image: linear-gradient(180deg, #000 80%, transparent);
+  transition: transform 1.2s var(--ease);
+}
+.missao-a__moeda {
+  position: absolute; right: -18px; bottom: -14px; width: 92px; height: auto;
+  filter: drop-shadow(0 0 18px rgba(247, 147, 26, .6));
+  animation: gira-moeda 7s ease-in-out infinite alternate;
+}
+@keyframes gira-moeda { to { transform: rotate(14deg) translateY(-6px); } }
 
 /* ---------- e-book: o bloco de contato do portfólio, em laranja ---------- */
 .ebook-a {
@@ -425,15 +508,23 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 .form__nota { color: var(--faint); font-size: 13px; text-align: center; line-height: 1.5; }
 .form__nota.ok { color: #34D399; }
 
-/* ---------- manifesto: as palavras acendem com a rolagem ---------- */
+/* ---------- manifesto ---------- */
 .manifesto-a { margin: 140px auto 0; max-width: 980px; text-align: center; }
 .manifesto-a__frase { font-size: clamp(36px, 6.4vw, 84px); font-weight: 600; letter-spacing: -.05em; line-height: 1.04; }
-.manifesto-a__frase span { color: rgba(255, 255, 255, .16); transition: color .4s ease; }
-.manifesto-a__frase span.acesa { color: var(--ink); }
-.manifesto-a__frase span.acesa:nth-child(6), .manifesto-a__frase span.acesa:nth-child(7) { color: var(--laranja); }
+/* digitado: o fantasma reserva o espaço; o texto digitado fica por cima,
+   com o cursor laranja piscando no fim (mesmo do R38 do rodapé) */
+.manifesto-a__frase { display: grid; }
+.manifesto-a__frase > span { grid-area: 1 / 1; }
+.manifesto-a__frase em { font-style: normal; color: var(--laranja); }
+.anim .manifesto-a__fantasma { visibility: hidden; }
+.manifesto-a__digita { text-align: center; }
+.manifesto-a__cursor {
+  display: inline-block; width: .06em; height: .82em; margin-left: .06em; vertical-align: -.06em;
+  background: var(--laranja); border-radius: 1px;
+  animation: pisca 1.05s steps(1) infinite;
+}
 .manifesto-a__linha { margin-top: 18px; color: var(--muted); font-size: clamp(18px, 2vw, 24px); }
 .manifesto-a__linha + .manifesto-a__linha { margin-top: 4px; }
-.manifesto-a__pergunta { margin-top: 18px; color: var(--laranja-claro); font-size: 18px; font-style: italic; }
 
 /* ---------- verificar: painel de segurança ----------
    Campo e botão numa barra só, como uma busca. O resultado entra
@@ -495,7 +586,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   transition: background .2s, transform .1s;
 }
 .verificar__botao svg { width: 18px; height: 18px; }
-.verificar__botao:hover { background: #FFA23A; }
 .verificar__botao:active { transform: scale(.96); }
 
 .verificar__res {
@@ -556,13 +646,11 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 @keyframes pisca { 50% { opacity: 0; } }
 .rodape-a__redes { display: flex; gap: 10px; margin-top: 18px; }
 .rodape-a__redes a { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .05); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink); transition: color .2s, box-shadow .2s, transform .35s var(--ease), background .2s; }
-.rodape-a__redes a:hover { color: var(--laranja); box-shadow: inset 0 0 0 1px var(--laranja); background: rgba(247, 147, 26, .08); transform: translateY(-2px); }
 .rodape-a__redes svg { width: 20px; height: 20px; }
 .rodape-a__arrobas { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 14px; color: var(--faint); font-size: 14px; }
 .rodape-a__legal { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .rodape-a__legal b { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
 .link-r { color: var(--ink-2); font-size: 15.5px; transition: color .2s; }
-.link-r:hover { color: var(--laranja); }
 .rodape-a__base { display: flex; flex-direction: column; gap: 6px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; }
 .rodape-a__base a { color: var(--ink); font-weight: 600; }
 
@@ -641,7 +729,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   .vitrine__aba-preco { grid-area: preco; display: block; color: var(--faint); font-size: 14px; font-variant-numeric: tabular-nums; }
   .vitrine__aba-seta { grid-area: seta; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: var(--faint); transition: transform .4s var(--ease), color .3s, background .3s; }
   .vitrine__aba-seta svg { width: 15px; height: 15px; }
-  .vitrine__aba:hover { background: rgba(255, 255, 255, .03); color: var(--ink); }
   .vitrine__aba[aria-selected="true"] { background: #2B2B33; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line-hover); }
   .vitrine__aba[aria-selected="true"] .vitrine__aba-preco { color: var(--muted); }
   .vitrine__aba[aria-selected="true"] .vitrine__aba-seta { color: #17171B; background: var(--laranja); transform: translateX(3px); }
@@ -656,9 +743,30 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   .vitrine__valor b { font-size: 52px; }
   .vitrine__acoes { width: 280px; flex: none; }
 
-  .mentoria-a { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
-  .mentoria-a__foto img { height: 100%; min-height: 560px; }
-  .mentoria-a__texto { justify-content: center; padding: 56px clamp(32px, 4vw, 64px); }
+  .missao-a { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: center; min-height: 420px; border-radius: 34px; }
+  .missao-a__texto { padding: 56px 0 56px clamp(40px, 5vw, 80px); }
+  .missao-a__titulo, .missao-a__com { white-space: nowrap; }
+  .missao-a__titulo { font-size: clamp(32px, 3.4vw, 48px); }
+  .missao-a__com span { font-size: 22px; }
+  .missao-a__com b { font-size: clamp(36px, 4vw, 56px); }
+  .missao-a__fio { width: 320px; margin: 22px 0 18px; }
+  .missao-a__logo { width: 230px; }
+  .missao-a__site { margin-top: 18px; font-size: 16px; }
+  .missao-a__palco { align-self: stretch; height: auto; min-height: 100%; margin: 0; }
+  .missao-a__halo { width: 400px; right: 4%; bottom: -60px; }
+  .missao-a__renato { right: 12%; height: 92%; }
+  .missao-a__moeda { width: 110px; right: 3%; bottom: auto; top: 22%; }
+  .missao-a__moeda { width: 130px; right: 2%; bottom: 10px; }
+
+  /* desktop: foto no card inteiro, texto à direita sobre o degradê */
+  .mentoria-a { grid-template-columns: 1fr 1fr; min-height: 640px; border-radius: 40px; }
+  .mentoria-a__foto { position: absolute; inset: 0 38% 0 0; height: auto; }
+  .mentoria-a__foto img {
+    object-position: 50% 18%;
+    -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 96%);
+    mask-image: linear-gradient(90deg, #000 45%, transparent 96%);
+  }
+  .mentoria-a__texto { grid-column: 2; justify-content: center; margin: 0; padding: 64px clamp(40px, 5vw, 80px) 64px 0; }
 
   .ebook-a { grid-template-columns: 1fr minmax(420px, .95fr); align-items: center; gap: 56px; padding: 64px; border-radius: 40px; }
   .livro { margin-top: 48px; }
@@ -684,7 +792,11 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   .rodape-a__base { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; }
 }
 
+@media (min-width: 900px) and (max-width: 1180px) {
+  .vitrine__rodape { flex-direction: column; align-items: stretch; }
+  .vitrine__acoes { width: 100%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fita__trilho { animation: none; }
-  .manifesto-a__frase span { color: var(--ink); }
 }

@@ -167,20 +167,29 @@
   const trilho = document.querySelector('.fita__trilho');
   if (trilho) trilho.append(...[...trilho.children].map((n) => n.cloneNode(true)));
 
-  /* 1d) Manifesto: as palavras acendem conforme a frase sobe na tela */
-  const palavras = [...document.querySelectorAll('.manifesto-a__frase span')];
-  const frase = document.querySelector('.manifesto-a__frase');
-  if (frase && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const acende = () => {
-      const r = frase.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (innerHeight * .5)));
-      const n = Math.round(p * palavras.length);
-      palavras.forEach((w, i) => w.classList.toggle('acesa', i < n));
+  /* 1d) Manifesto: digitado, como o R38 do rodapé */
+  /* manifesto digitado: começa quando a frase entra na tela, uma vez só */
+  const dig2 = document.querySelector('.manifesto-a__digita');
+  if (dig2 && document.documentElement.classList.contains('anim')) {
+    const PARTES = [['Eu acredito que você merece ', false], ['controle total', true], [' sobre seu dinheiro.', false]];
+    const cursor = document.createElement('i');
+    cursor.className = 'manifesto-a__cursor';
+    dig2.append(cursor);
+    const digita = async () => {
+      for (const [txt, laranja] of PARTES) {
+        const alvo = laranja ? document.createElement('em') : document.createTextNode('');
+        if (laranja) dig2.insertBefore(alvo, cursor); else dig2.insertBefore(alvo, cursor);
+        for (const ch of txt) {
+          if (laranja) alvo.textContent += ch; else alvo.textContent += ch;
+          await new Promise((r) => setTimeout(r, ch === ' ' ? 30 : 38 + Math.random() * 30));
+        }
+      }
     };
-    addEventListener('scroll', acende, { passive: true });
-    acende();
-  } else {
-    palavras.forEach((w) => w.classList.add('acesa'));
+    new IntersectionObserver((es, o) => es.forEach((e) => {
+      if (e.isIntersecting) { o.disconnect(); setTimeout(digita, 250); }
+    }), { threshold: .6 }).observe(dig2.parentElement);
+  } else if (dig2) {
+    dig2.remove();
   }
 
   /* 2) Formulário do e-book
